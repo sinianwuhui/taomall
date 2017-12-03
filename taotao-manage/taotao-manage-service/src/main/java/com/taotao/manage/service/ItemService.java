@@ -20,4 +20,20 @@ public class ItemService extends BaseService<Item>{
         itemDesc.setItemDesc(desc);
         itemDescService.save(itemDesc);
     }
+
+    public void updateItem(Item item, String desc) {
+        Item itemQuery = queryById(item.getId());
+        if(null == itemQuery){
+            return;
+        }
+        item.setStatus(null);
+        item.setCreated(null);
+        updateSelective(item);
+        ItemDesc itemDesc =new ItemDesc();
+        itemDesc.setItemId(item.getId());
+        itemDesc.setItemDesc(desc);
+        itemDescService.updateSelective(itemDesc);
+
+
+    }
 }

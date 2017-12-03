@@ -100,6 +100,7 @@ public abstract class BaseService<T extends BasePojo> {
      * @return
      */
     public Integer update(T record) {
+        record.setUpdated(new Date());
         return this.mapper.updateByPrimaryKey(record);
     }
 

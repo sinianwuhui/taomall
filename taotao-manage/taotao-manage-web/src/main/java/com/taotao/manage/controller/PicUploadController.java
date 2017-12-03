@@ -69,7 +69,7 @@ public class PicUploadController {
 
 		// 生成图片的绝对引用地址
 		String picUrl = StringUtils.replace(StringUtils.substringAfter(filePath, "E:/upload"), "\\", "/");
-		fileUploadResult.setUrl("image.taotao.com"+picUrl);
+		fileUploadResult.setUrl("http://image.taotao.com"+picUrl);
 
 		File newFile = new File(filePath);
 

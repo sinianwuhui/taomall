@@ -19,6 +19,12 @@
         <module>taotao-manage-service</module>
         <module>taotao-manage-web</module>
     </modules>
-
+    <dependencies>
+        <dependency>
+            <groupId>com.taotao.common</groupId>
+            <artifactId>taotao-common</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>
