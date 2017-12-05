@@ -33,12 +33,12 @@ public class ItemController {
      * @return
      */
     @RequestMapping(method = RequestMethod.POST)
-    public ResponseEntity<Void> saveItem(Item item,String desc){
+    public ResponseEntity<Void> saveItem(Item item,String desc,String itemParams){
         try {
             if(logger.isDebugEnabled()) {
                 logger.debug("******新增商品{}开始！****", item.getTitle());
             }
-            itemService.saveItem(item,desc);
+            itemService.saveItem(item,desc,itemParams);
 
             if(logger.isDebugEnabled()) {
             logger.debug("******新增商品成功！****** " );
